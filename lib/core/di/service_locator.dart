@@ -37,12 +37,12 @@ void init() {
     () => ThemeRepository(),
   );
   sl.registerLazySingleton(
-    () => SongRepository(),
+    () => SongsRepository(),
   );
   sl.registerLazySingleton<MusicPlayer>(
     () => JustAudioPlayer(),
   );
-  sl.registerLazySingleton(() => SongRepository());
+  sl.registerLazySingleton(() => SongsRepository());
   sl.registerLazySingleton(() => FavoritesRepository());
   sl.registerLazySingleton(() => RecentRepository());
   sl.registerLazySingleton(() => SearchRepository());

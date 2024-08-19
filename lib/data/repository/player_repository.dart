@@ -63,7 +63,7 @@ class JustAudioPlayer implements MusicPlayer {
     _player.playbackEventStream.listen((event) {
       if (event.currentIndex != null && currentPlaylist.isNotEmpty) {
         String songId = currentPlaylist[event.currentIndex!].id.toString();
-        SongRepository().addToRecentlyPlayed(songId);
+        SongsRepository().addToRecentlyPlayed(songId);
       }
     });
 

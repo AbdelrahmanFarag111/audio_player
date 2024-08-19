@@ -148,7 +148,7 @@ class _PlayerPageState extends State<PlayerPage> {
                                 child: BlocBuilder<SongBloc, SongState>(
                                   builder: (context, state) {
                                     return AnimatedFavoriteButton(
-                                      isFavorite: sl<SongRepository>()
+                                      isFavorite: sl<SongsRepository>()
                                           .isFavorite(mediaItem.id),
                                       onTap: () {
                                         context.read<SongBloc>().add(
@@ -285,7 +285,7 @@ class _PlayerPageState extends State<PlayerPage> {
                               child: BlocBuilder<SongBloc, SongState>(
                                 builder: (context, state) {
                                   return AnimatedFavoriteButton(
-                                    isFavorite: sl<SongRepository>()
+                                    isFavorite: sl<SongsRepository>()
                                         .isFavorite(mediaItem.id),
                                     onTap: () {
                                       context.read<SongBloc>().add(

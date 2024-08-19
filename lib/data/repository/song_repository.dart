@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 
 import '../services/hive_box.dart';
 
-class SongRepository {
+class SongsRepository {
   final box = Hive.box('myBox');
   static const int maxRecentlyPlayed =
   50; // Maximum number of recently played songs to store

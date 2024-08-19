@@ -1,5 +1,6 @@
 import 'package:aduio_player/bloc/theme/theme_bloc.dart';
 import 'package:aduio_player/core/routing/app_router.dart';
+import 'package:aduio_player/features/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,11 +23,12 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: 'PlayZilla',
               theme: AppThemeData.getTheme(),
-              onGenerateRoute: (settings) => AppRouter.generateRoute(settings),
+              home: child,
             );
           },
         );
       },
+      child: const HomePage(),
     );
   }
 }
