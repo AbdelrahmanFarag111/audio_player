@@ -1,5 +1,6 @@
 class Assets{
-
+  // Icons
+  static const String logo = 'assets/icon/icon.png';
   // Images
   static const String earphones = 'assets/images/earphones.jpg';
   static const String heart = 'assets/images/heart.jpg';
