@@ -1,5 +1,4 @@
 import 'package:aduio_player/bloc/theme/theme_bloc.dart';
-import 'package:aduio_player/core/routing/app_router.dart';
 import 'package:aduio_player/features/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'PlayZilla',
+              title: 'Sound',
               theme: AppThemeData.getTheme(),
               home: child,
             );

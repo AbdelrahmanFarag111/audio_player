@@ -11,6 +11,7 @@ import '../../bloc/search/search_bloc.dart';
 import '../../bloc/song/song_bloc.dart';
 import '../../bloc/theme/theme_bloc.dart';
 import '../../data/repository/favorite_repository.dart';
+import '../../data/repository/home_repository.dart';
 import '../../data/repository/player_repository.dart';
 import '../../data/repository/recent_repository.dart';
 import '../../data/repository/search_repository.dart';
@@ -33,14 +34,10 @@ void init() {
   sl.registerFactory(() => PlaylistsCubit());
 
   // Repository
-  sl.registerLazySingleton(
-    () => ThemeRepository(),
-  );
-  sl.registerLazySingleton(
-    () => SongsRepository(),
-  );
+  sl.registerLazySingleton(() => ThemeRepository());
+  sl.registerLazySingleton(() => HomeRepository());
   sl.registerLazySingleton<MusicPlayer>(
-    () => JustAudioPlayer(),
+        () => JustAudioPlayer(),
   );
   sl.registerLazySingleton(() => SongsRepository());
   sl.registerLazySingleton(() => FavoritesRepository());

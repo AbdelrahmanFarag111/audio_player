@@ -1,3 +1,4 @@
+import 'package:aduio_player/core/di/service_locator.dart';
 import 'package:aduio_player/my_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +14,6 @@ import 'bloc/scan/scan_cubit.dart';
 import 'bloc/search/search_bloc.dart';
 import 'bloc/song/song_bloc.dart';
 import 'bloc/theme/theme_bloc.dart';
-import 'core/di/service_locator.dart';
 import 'data/repository/player_repository.dart';
 import 'data/services/hive_box.dart';
 

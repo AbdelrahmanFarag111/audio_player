@@ -1,5 +1,19 @@
 import 'package:aduio_player/features/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:on_audio_query/on_audio_query.dart';
+
+import '../../features/config/scan_page.dart';
+import '../../features/config/settings_page.dart';
+import '../../features/config/themes_page.dart';
+import '../../features/details/album_page.dart';
+import '../../features/details/artist_page.dart';
+import '../../features/details/genre_page.dart';
+import '../../features/home/search_page.dart';
+import '../../features/player/player_page.dart';
+import '../../features/player/queue_page.dart';
+import '../../features/playlists/favorites_page.dart';
+import '../../features/playlists/playlist_details_page.dart';
+import '../../features/playlists/recents_page.dart';
 
 class AppRouter {
   static const String homeRoute = '/home';
@@ -22,6 +36,69 @@ class AppRouter {
       case homeRoute:
         return MaterialPageRoute<dynamic>(
           builder: (_) => const HomePage(),
+        );
+      case favoritesRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const FavoritesPage(),
+        );
+      case recentsRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const RecentsPage(),
+        );
+      case playerRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const PlayerPage(),
+        );
+      case artistRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => ArtistPage(
+            artist: settings.arguments as ArtistModel,
+          ),
+        );
+      case albumRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => AlbumPage(
+            album: settings.arguments as AlbumModel,
+          ),
+        );
+      case genreRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => GenrePage(
+            genre: settings.arguments as GenreModel,
+          ),
+        );
+      case themesRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const ThemesPage(),
+        );
+      case settingsRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const SettingsPage(),
+        );
+      case scanRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const ScanPage(),
+        );
+      case playlistDetailsRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => PlaylistDetailsPage(
+            playlist: settings.arguments as PlaylistModel,
+          ),
+        );
+      case queueRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const QueuePage(),
+        );
+      case searchRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const SearchPage(),
+        );
+      case addSongToPlaylistRoute:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => AddSongToPlaylist(
+            songs: (settings.arguments as Map)['songs'] as List<SongModel>,
+            playlist: (settings.arguments as Map)['playlist'] as PlaylistModel,
+          ),
         );
       default:
         return MaterialPageRoute<dynamic>(
