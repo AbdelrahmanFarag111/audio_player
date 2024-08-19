@@ -1,6 +1,5 @@
 import 'package:aduio_player/data/repository/home_repository.dart';
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:flutter/foundation.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
