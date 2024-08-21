@@ -234,7 +234,7 @@ class SortBottomSheet extends StatefulWidget {
 class _SortBottomSheetState extends State<SortBottomSheet> {
   int currentSortType = Hive.box(HiveBox.boxName).get(
     HiveBox.songSortTypeKey,
-    defaultValue: SongSortType.TITLE.index,
+    defaultValue: SongSortType.DATE_ADDED.index,
   );
   int currentOrderType = Hive.box(HiveBox.boxName).get(
     HiveBox.songOrderTypeKey,

@@ -15,7 +15,6 @@ import '../../data/repository/song_repository.dart';
 import '../widgets/animated_favorite_button.dart';
 import '../widgets/seek_bar.dart';
 
-
 class PlayerPage extends StatefulWidget {
   const PlayerPage({
     super.key,
