@@ -64,7 +64,7 @@ class _PlayerPageState extends State<PlayerPage> {
         stream: player.sequenceState,
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
-            return const SizedBox.shrink();
+            return SizedBox.shrink();
           }
           final sequence = snapshot.data;
           MediaItem? mediaItem = sequence!.sequence[sequence.currentIndex].tag;

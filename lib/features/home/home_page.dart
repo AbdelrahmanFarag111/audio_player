@@ -1,5 +1,6 @@
 import 'package:aduio_player/features/home/views/albums_view.dart';
 import 'package:aduio_player/features/home/views/artists_view.dart';
+import 'package:aduio_player/features/home/views/genres_view.dart';
 import 'package:aduio_player/features/home/views/playlists_view.dart';
 import 'package:aduio_player/features/home/views/songs_view.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>with TickerProviderStateMixin {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   final OnAudioQuery _audioQuery = sl<OnAudioQuery>();
   late TabController _tabController;
   bool _hasPermission = false;
@@ -100,6 +101,7 @@ class _HomePageState extends State<HomePage>with TickerProviderStateMixin {
                 PlaylistsView(),
                 ArtistsView(),
                 AlbumsView(),
+                GenresView(),
               ],
             ),
           ),
@@ -127,7 +129,7 @@ class _HomePageState extends State<HomePage>with TickerProviderStateMixin {
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Themes.getTheme().primaryColor,
-      title: const Text('Meloplay'),
+      title: const Text('Sound'),
       // search button
       actions: [
         IconButton(
@@ -166,7 +168,7 @@ class _HomePageState extends State<HomePage>with TickerProviderStateMixin {
                       width: 8,
                     ),
                     const Text(
-                      'PlayZilla',
+                      'Meloplay',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
